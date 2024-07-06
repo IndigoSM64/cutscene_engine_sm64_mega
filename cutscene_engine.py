@@ -5,10 +5,22 @@ class SetupBoxEmpty(bpy.types.Operator):
     bl_label = "Setup Box Empty"
 
     def execute(self, context):
-        bpy.ops.object.empty_add(type='PLAIN_AXES')
+        bpy.ops.object.empty_add(type='CUBE')
         obj = bpy.context.selected_objects[0]
-        obj.name = "cutscene_trigger"
+        obj.name = "cutscene_trigger_cube"
         return {'FINISHED'}
+    
+class SetupConeEmpty(bpy.types.Operator):
+    bl_idname = "object.setup_cone_empty"
+    bl_label = "Setup Cone Empty"
+
+    def execute(self, context):
+        bpy.ops.object.empty_add(type='CONE')
+        obj = bpy.context.selected_objects[0]
+        obj.name = "cutscene_trigger_cone"
+        return {'FINISHED'}
+    
+
 
 class TriggerPanel(bpy.types.Panel):
     bl_idname = "TriggerPanel"
@@ -22,4 +34,4 @@ class TriggerPanel(bpy.types.Panel):
         row = layout.row()
         row.operator("object.setup_box_empty", text="Add Box")
         row = layout.row()
-        row.operator("object.setup_box_empty", text="Add Cylinder")
+        row.operator("object.setup_cone_empty", text="Add Cylinder")
