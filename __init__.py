@@ -1,7 +1,6 @@
 import bpy
 from bpy.utils import register_class, unregister_class
 
-
 bl_info = {
     "name": "Cutscene Engine SM64",
     "blender": (4, 0 ,2),
