@@ -11,18 +11,13 @@ import bpy
 
 from .cutscene_engine import SetupBoxEmpty, TriggerPanel
 
-classes = [
-    SetupBoxEmpty,
-    TriggerPanel
-]
-
 def register():
-    for cls in classes:
-        bpy.utils.register_class(cls)
+    bpy.utils.register_class(SetupBoxEmpty)
+    bpy.utils.register_class(TriggerPanel)
 
 def unregister():
-    for cls in classes:
-        bpy.utils.unregister_class(cls)
+    bpy.utils.unregister_class(SetupBoxEmpty)
+    bpy.utils.unregister_class(TriggerPanel)
 
 if __name__ == "__main__":
     register()
