@@ -9,14 +9,18 @@ bl_info = {
 
 import bpy
 
-from .cutscene_engine import SetupBoxEmpty, TriggerPanel
+from .cutscene_engine import SetupBoxEmpty, TriggerPanel, SetupConeEmpty
 
 def register():
     bpy.utils.register_class(SetupBoxEmpty)
+    bpy.utils.register_class(SetupConeEmpty)
+
     bpy.utils.register_class(TriggerPanel)
 
 def unregister():
     bpy.utils.unregister_class(SetupBoxEmpty)
+    bpy.utils.register_class(SetupConeEmpty)
+
     bpy.utils.unregister_class(TriggerPanel)
 
 if __name__ == "__main__":
