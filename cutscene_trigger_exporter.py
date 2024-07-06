@@ -1,4 +1,4 @@
-import bpy
+import bpy as bpy
 
 class SetupBoxEmpty(bpy.types.Operator):
     bl_idname = "object.setup_box_empty"
