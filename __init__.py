@@ -1,4 +1,6 @@
 import bpy
+from bpy.utils import register_class, unregister_class
+
 
 bl_info = {
     "name": "Cutscene Engine SM64",
